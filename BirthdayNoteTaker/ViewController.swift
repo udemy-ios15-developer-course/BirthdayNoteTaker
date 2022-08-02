@@ -39,5 +39,11 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(birthdate.text!, forKey: "birthdate")
     }
     
+    @IBAction func clearButtonClicked(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "birthdate")
+        name.text = ""
+        birthdate.text = ""
+    }
 }
 
